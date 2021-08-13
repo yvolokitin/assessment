@@ -1,0 +1,21 @@
+﻿import React from 'react';
+
+export default function Footer(props) {
+    return (
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style={{minHeight: '47px', backgroundColor: '#363636'}}>
+            <tr>
+                <td align="left" style={{marginLeft: '10px', textAlign: 'left', padding: '10px'}}>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAlCAYAAADobA+5AAAABmJLR0QA/wD/AP+gvaeTAAACVklEQVRoge2avWsUQRjGf8+yiUaLNIKdpVrcn2AjFoJYCIpWgtiksFDwX7ATQSwUJUIgTZpgYaMiGpCkUAQxfoQoqKDF4Qc2Ejk9X4u7g0Myczu3ub3MOT84bpl35nmHh5l3l53FzA7ZcDhKhGTAeMG+P4BV4KMjXgfetPsVYVvBfpuKDNjqif8CbgD7gUlJe4DLjr6zknYDk8A+4Arw06M9ET7d4ZMBWxyxJaAmaUrSgqRmEUFJTUmLks4Ce4G7jq4jZdg8cEDSahlxSR+Aw8D0OuGR2ZKvgJOSfNupMJJ+A1PAw39CvlKwaVmv6J+StLaRSST9AU4Dja7mkVhhDyQ9GUQiSe+Bua6mkahh1wec71rXdbQrrGNYE7g/4HyPgS/t6+hX2FNJ3waZrF3LOsU/WsM6NexFRTmX2//RGtZZYW8rytl5touyhuXAOeAm8KminAvAQeB5Rfk2lFzSd+BRVQkl1YF7VeXbaLJhTyA2kmGBZGY2Y2YNx+9lGXEzW/Joz5fQPeLRbZhZrYT2skd3JqdV+Mcc44u+XHQx5tF2tRch6zG+zM4Z92jnaUsGkgwLJBkWSDIskGRYIDlwC3jniH8tqT8N3HHEVkrovgYueOL1EtpXgR2O2LNgNTM77ziYvVhiktGQtmQgybBAkmGB9GNY7miP8g1qKP0Ytt3R7rqzjBT9GLbL0f5fGBaMma04HivqZpZqYjdmdqLHR3Jnhj3HQSNXwMwmgJ20juFqwDHguG9Mm9vALK1juzXgs6SiH9nFi5ld6rGaijLXO1s8pJoTyF9aDuZtnzIgkAAAAABJRU5ErkJggg=="/>
+                </td>
+                <td align="right" style={{marginRight: '10px', textAlign: 'right', padding: '10px'}}>
+                    <img src="data:image/png;base64,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"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style={{marginLeft: '10px', color: '#9c9c9c'}}>Powered by DT TA pipeline tools </p>
+                </td>
+            </tr>
+        </table>
+    );
+}

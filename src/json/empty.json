@@ -1,0 +1,17 @@
+﻿{
+    "total": "N/A",
+    "level": "Undefined",
+    "practise_automation": {},
+    "practise_unit_test": {},
+    "practise_component_test": {},
+    "practise_smoke_regression": {},
+    "practise_code_quality_and_review": {},
+    "practise_testcase_management": {},
+    "practise_defect_management": {},
+    "practise_integration": {},
+    "practise_deployment": {},
+    "practise_release_strategy": {},
+    "practise_requirements": {},
+    "practise_docs_logs": {},
+    "practise_non_functional": {}
+}

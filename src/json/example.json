@@ -1,0 +1,62 @@
+{
+    "total": "86",
+    "level": "Advanced",
+    "practise_automation": {
+        "practise_automation_score": "85",
+        "practise_automation_q1": "Yes",
+        "practise_automation_q2": "Yes",
+        "practise_automation_q3": "Yes",
+        "practise_automation_q4": "Yes",
+        "practise_automation_q5": "Yes",
+        "practise_automation_q6": "Yes",
+        "practise_automation_q7": "No",
+        "practise_automation_comments": ""
+    },
+    "practise_unit_test": {
+        "practise_unit_test_score": "-1",
+        "practise_unit_test_q1": "NA (NA%)",
+        "practise_unit_test_q2": "Never (0%)",
+        "practise_unit_test_q3": "No (0%)",
+        "practise_unit_test_q4": "No (0%)",
+        "practise_unit_test_q5": "No (0%)",
+        "practise_unit_test_q6": "No (0%)",
+        "practise_unit_test_q7": "No (0%)",
+        "practise_unit_test_comments": ""
+    },
+    "practise_component_test": {
+        "practise_component_test_score": "62",
+        "practise_component_test_q1": "Yes",
+        "practise_component_test_q2": "Yes",
+        "practise_component_test_q3": "No",
+        "practise_component_test_q4": "Yes",
+        "practise_component_test_q5": "No",
+        "practise_component_test_q6": "Yes",
+        "practise_component_test_q7": "Yes",
+        "practise_component_test_q8": "No",
+        "practise_component_test_comments": ""
+    },
+    "practise_smoke_regression": {
+        "practise_smoke_regression_score": "79",
+        "practise_smokeregression_q1": "Yes (5%)",
+        "practise_smokeregression_q2": "Yes, 100% (15%)",
+        "practise_smokeregression_q3": "Per-commit or at least daily (10%)",
+        "practise_smokeregression_q4": "< 5 min (5%)",
+        "practise_smokeregression_q5": "0 (All Automated) (5%)",
+        "practise_smokeregression_q6": "~ 90 - 99% (2%)",
+        "practise_smokeregression_q7": "Yes (5%)",
+        "practise_smokeregression_q8": "Daily (7%)",
+        "practise_smokeregression_q9": "70% (10%)",
+        "practise_smokeregression_q10": "< 4h (10%)",
+        "practise_smokeregression_q11": "< 3 days (5%)",
+        "practise_smoke_regression_comments": "Completed "
+    },
+    "practise_code_quality_and_review": {},
+    "practise_testcase_management": {},
+    "practise_defect_management": {},
+    "practise_integration": {},
+    "practise_deployment": {},
+    "practise_release_strategy": {},
+    "practise_requirements": {},
+    "practise_docs_logs": {},
+    "practise_non_functional": {}
+}

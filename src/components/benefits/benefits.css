@@ -1,0 +1,39 @@
+﻿.benefits_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.benefits_card {
+    width: 80%;
+    margin: 2%;
+    padding: 2%;
+    transition: background-color 2s;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 0px grey;
+}
+.benefits_title {
+    margin: 1%;
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'TeleGrotesk', Helvetica Neue, Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.benifits_image_wrapper {
+    width: 98%;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.benifits_image {
+    width: 53%;
+}
+.benefits_text {
+    margin: 3%;
+    font-size: 18px;
+    font-family: 'Roboto', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    text-align: justify;
+}

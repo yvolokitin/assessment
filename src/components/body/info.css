@@ -1,0 +1,51 @@
+.info_title {
+    width: 96%;
+
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    color: #262626;
+
+    line-height: 0.9;
+    text-align: center;
+
+    font-size: 38px;
+    font-family: TeleGrotesk,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+.info_text {
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+
+    color: #262626;
+    text-align: justify;
+
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.info_wrapper_img {
+    width: 96%;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info_wrapper_img img {
+    width: 45%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 13px;
+}
+.info_wrapper_btn {
+    height: 35px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 5px;
+    background-color: #fbfbf8;
+    color: #3f51b5;
+}
