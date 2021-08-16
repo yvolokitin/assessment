@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {Dialog, Slide, Card, Button} from '@material-ui/core';
 
 import {language} from './../translations/language';

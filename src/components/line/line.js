@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {useStyles} from './../helpers/styles';
 
 export default function ColorLine(props) {

@@ -1,4 +1,4 @@
-﻿// recommends translation
+// recommends translation
 export const recommends = {
     // English
     'en': {

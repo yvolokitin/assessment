@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {Button} from '@material-ui/core';
 
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -14,14 +14,8 @@ import image_unittest from './../../images/unittestbestpractises.jpg';
 import image_regression from './../../images/regressiontest.jpg';
 
 export default function Card(props) {
-    const [id, setId] = React.useState('');
     const [info, setInfo] = React.useState(false);
     const [image, setImage] = React.useState('');
-
-    React.useEffect(() => {
-        // console.log('Card.useEffect -> ' + props.uid);
-        setId('id_' + props.uid);
-    }, []);
 
     function onInfo(open) {
         if (props.uid === 'practise_automation') {
@@ -42,7 +36,7 @@ export default function Card(props) {
     }
 
     return (
-        <div id={id} className='card_wrapper'>
+        <div id={props.uid} className='card_wrapper'>
             <div className='card_wrapper_img' onClick={() => props.onUpdate(props.uid)}>
                 <img src={props.image} alt='logo' onContextMenu={(e) => e.preventDefault()}/>
             </div>

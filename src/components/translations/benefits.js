@@ -1,4 +1,4 @@
-﻿// card translations
+// card translations
 export const benefits = {
     // English
     'en': {

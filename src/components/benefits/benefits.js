@@ -1,11 +1,5 @@
-﻿import React from 'react';
-import {Dialog, Slide, Typography, Button, Link} from '@material-ui/core';
-
-import CancelIcon from '@material-ui/icons/Cancel';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-
-import ColorLine from './../line/line';
-import Title from './../dialog/title';
+import { React } from 'react';
+import Link from '@material-ui/core/Link';
 
 import image_radar from './../../images/radar_picture.jpg';
 import benefits_picture from './../../images/benefits_picture.jpg';

@@ -1,22 +1,19 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { CssBaseline, Menu, MenuItem, Link, Tooltip, Button, Fade } from '@material-ui/core';
+import { CssBaseline, Menu, MenuItem, Link, Tooltip, Fade } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-import { useHistory, useParams, BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import Brightness5Icon from '@material-ui/icons/Brightness5';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import LanguageIcon from '@material-ui/icons/Language';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SaveIcon from '@material-ui/icons/Save';
-
-import axios from 'axios';
 
 import Benefits from './components/benefits/benefits';
 
@@ -33,15 +30,8 @@ import Name from './components/body/name';
 
 import Results from './components/results/results';
 
-import UnitTest from './components/practise/unittest';
-import ReleaseStrategy from './components/practise/releasestrategy';
-import Integration from './components/practise/integration';
-import Deployment from './components/practise/deployment';
-import SmokeRegression from './components/practise/smokeregression';
-
-import {areas} from './components/translations/areas';
-import {questions} from './components/translations/questions';
 import {menu} from './components/translations/menu';
+import {areas} from './components/translations/areas';
 
 import {export_json, remove_all_answers_from_localstorage} from './components/helpers/functions';
 import {practises, practises_autotest, practises_processes, practises_autoops, practises_cicd, practises_rai} from './components/helpers/practises';
@@ -52,7 +42,6 @@ import './App.css';
 
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
-import AssessmentResults, {AssessmentResultV1} from "./lib/results";
 
 export const LightTooltip = withStyles((theme) => ({
     tooltip: {
@@ -79,10 +68,6 @@ const STATUS = {
     BENEFITS: 12,
 }
 
-// https://automate-dev.telekom.de/assessment/self
-// const TOKEN_URL_API = 'https://automate-dev.telekom.de/api/services/tokener';
-const TOKEN_URL_API = 'https://automate-dev.telekom.de/api/services/tokener?service_name=token_sala_healthradar&stoken=';
-
 export default function App(props) {
     const [reference, setReference] = useState('');
 
@@ -100,38 +85,12 @@ export default function App(props) {
     const [color, setColor] = useState('');
     const [name, setName] = useState('');
 
-    const [longToken, setLongToken] = useState('');
-    const [shortToken, setShortToken] = useState('');
-    const [edit, setEdit] = useState('');
-
     const width = 1080;
 
-    const assessmentResults = new AssessmentResults()
-
-    const onTokenUpdate = useCallback((response) => {
-        console.log('!!!!!! RESPONSE RECEIVED !!!!!!!');
-        console.table(response);
-
-        if ('data' in response) {
-            if ('token' in response.data) {
-                setLongToken(response.data['token']);
-            }
-        }
-
-    }, [ ])
-
-    const onTokenError = useCallback((error) => {
-        console.log('********* onTokenError ' + error);
-
-        // for test needs with localhost only
-        // setLongToken("NYG8KP51ESMPPG45WC3LFDVZJR7DDWOC1LFZ3SDSSD0QM8FDN4");
-
-    }, [ ])
-
     useEffect(() => {
-        // console.log('Location ' + location);
+        console.log('Location ' + window.location);
 
-        if (location.toString().indexOf('benefits') > 0) {
+        if (window.location.toString().indexOf('benefits') > 0) {
             setReference('/');
 
         } else {
@@ -140,40 +99,14 @@ export default function App(props) {
 
         var local_name = localStorage.getItem('name');
         if (local_name === null || local_name === '') {
-            setName('TA HUB');
+            setName('Assesment');
         } else {
             setName(local_name);
         }
 
-        if (location.search.length > 0) {
-            let token = (new URLSearchParams(location.search)).get('automate_self_assessment_token');
-            setShortToken(token);
-
-            let hubName = (new URLSearchParams(location.search)).get('automate_self_assessment_hub');
-            setName(hubName);
-
-            let editId = (new URLSearchParams(location.search)).get('automate_edit_id');
-            setEdit(editId);
-
-            console.log('token ' + token + ', hubName ' + hubName + ', editId ' + editId);
-
-            var requested_url = TOKEN_URL_API + token + '&action=ini&redirect_type=';
-
-            // if editId > 0 -> we have to retrive long token and data
-            if (editId !== null && editId > 0) {
-                requested_url = requested_url + 'edit&id=' + editId;
-            } else { // else just request long token only
-                requested_url = requested_url + 'create';
-            }
-
-            axios.get(requested_url)
-                .then(onTokenUpdate)
-                .catch(onTokenError);
-        }
-
         recalculateScore();
 
-    }, [ onTokenUpdate, onTokenError ]);
+    }, [ ]);
 
     function onOpen(open_uid) {
         console.log('App.onOpen -> ' + open_uid);
@@ -224,9 +157,11 @@ export default function App(props) {
                 setAssestDate(localStorage.getItem('date'));
 
                 if (localStorage.getItem('percent') === 'N/A') {
-                    setPercent('N/A'); setPercentText('N/A'); setColor('red');
+                    setPercent('N/A'); setPercentText('N/A');
+                    setAssestDate('N/A'); setColor('red');
 
                 } else {
+                    setAssestDate(new Date().toLocaleDateString());
                     setPercent(localStorage.getItem('percent'));
                     setPercentText(localStorage.getItem('percent') + ' %');
                 }
@@ -283,41 +218,8 @@ export default function App(props) {
                     setScreen(STATUS.NONE);
 
                 } else if (value === 'Database') {
-                    console.table('Save in Database');
+                    console.table('Save in Database, NOT IMPLEMENTED');
 
-                    const jsonResult = export_json();
-                    const answers = {}
-
-                    practises.map(p => {
-                        return p.uid
-                    }).filter(id => {
-                        return !!jsonResult[id]
-                    }).forEach(id => {
-                        answers[id] = jsonResult[id]
-                    })
-
-                    const assessmentResult = new AssessmentResultV1()
-                        .withName(jsonResult.name ? jsonResult.name : "Unknown")
-                        .withPercent(jsonResult.percent ? jsonResult.percent : "0")
-                        .withLevel(jsonResult.level ? jsonResult.level : "Unknown")
-                        .withAnswers(answers)
-
-                    assessmentResults.add(assessmentResult.toJson()).then(() => {
-                        setScreen(STATUS.NONE)
-                    }).catch(reason => {
-                        console.error(reason)
-                    });
-
-
-                    // longToken.length > 0 -> Send results to Coalition Team
-                    if (longToken.length > 0) {
-                        console.log('******* Send results to automate-dev');
-                        console.table(jsonResult);
-                        var post_url = 'https://automate-dev.telekom.de/api/services/tokener?service_name=token_sala_healthradar&token=' + longToken + '&action=use';
-                        axios.post(post_url, jsonResult)
-                            .then(onTokenUpdate)
-                            .catch(onTokenError);
-                    }
                 }
 
                 break;
@@ -422,7 +324,7 @@ export default function App(props) {
                     <font id='fw_name_id'  onClick={() => setScreen(STATUS.NAME)}>{name}</font>
                 </div>
                 <div className='header_div_right'>
-                    LIFE IS FOR SHARING
+                    CHECK YOURSELF
                 </div>
             </div>
 
@@ -433,19 +335,19 @@ export default function App(props) {
                             <HelpOutlineRoundedIcon id='fw_help_id'
                                 onClick={() => setScreen(STATUS.HELP)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['contacts']}>
                             <MailOutlineIcon id='fw_contact_id'
                                 onClick={() => setScreen(STATUS.CONTACTS)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['benefits']}>
                             <Link href={reference} style={{height: '100%', marginLeft: '5%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end',}}>
                                 <AcUnitIcon id='fw_benefits_id'
                                     className='header_div_right_icon'
-                                    color='secondary' fontSize='default'/>
+                                    color='secondary' fontSize='medium'/>
                             </Link>
                         </LightTooltip>
                     </div>
@@ -461,38 +363,38 @@ export default function App(props) {
                             <TrendingUpIcon id='fw_results_id'
                                 onClick={() => setScreen(STATUS.RESULTS)}
                                 className='header_div_right_icon_assesment'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['language']}>
                             <LanguageIcon id='fw_language_id'
                                 onClick={() => setScreen(STATUS.LANGUAGE)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['import']}>
                             <ImportExportIcon id='fw_import_id'
                                 onClick={() => setScreen(STATUS.IMPORT)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['export']}>
                             <SaveIcon id='fw_export_id'
                                 onClick={() => setScreen(STATUS.EXPORT)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['delete']}>
                             <DeleteIcon  id='fw_remove_id'
                                 onClick={() => setScreen(STATUS.DELETE)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
 
                         <LightTooltip title={menu[lang]['login']}>
                             <AccountCircleIcon  id='fw_login_id'
                                 onClick={() => setScreen(STATUS.LOGIN)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='default'/>
+                                color='secondary' fontSize='medium'/>
                         </LightTooltip>
 
                     </div>
@@ -661,45 +563,11 @@ export default function App(props) {
 
             <Results open={screen === STATUS.RESULTS}
                 onUpdate={onStatus}
+                assestDate={assestDate}
                 percentText={percentText}
                 percent={percent}
                 level={level}
                 color={color}
-                points={points}
-                width={width} 
-                lang={lang}
-                uid={uid}/>
-
-            <UnitTest open={screen === 'practise_unit_test'}
-                onUpdate={onStatus}
-                points={points}
-                width={width} 
-                lang={lang}
-                uid={uid}/>
-
-            <ReleaseStrategy open={screen === 'practise_release_strategy'}
-                onUpdate={onStatus}
-                points={points}
-                width={width} 
-                lang={lang}
-                uid={uid}/>
-
-            <Integration open={screen === 'practise_integration'}
-                onUpdate={onStatus}
-                points={points}
-                width={width} 
-                lang={lang}
-                uid={uid}/>
-
-            <Deployment open={screen === 'practise_deployment'}
-                onUpdate={onStatus}
-                points={points}
-                width={width} 
-                lang={lang}
-                uid={uid}/>
-
-            <SmokeRegression open={screen === 'practise_smoke_regression'}
-                onUpdate={onStatus}
                 points={points}
                 width={width} 
                 lang={lang}

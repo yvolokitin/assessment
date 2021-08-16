@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {Dialog, Button} from '@material-ui/core';
 
 import CancelIcon from '@material-ui/icons/Cancel';

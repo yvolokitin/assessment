@@ -1,4 +1,4 @@
-﻿// disovery translations
+// disovery translations
 export const discovery = {
     // English
     'en': {

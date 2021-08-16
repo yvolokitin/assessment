@@ -1,4 +1,4 @@
-﻿// delete dialog translations
+// delete dialog translations
 export const remove = {
     // English
     'en': {

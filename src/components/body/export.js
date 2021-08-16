@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button} from '@material-ui/core';
 import {RadioGroup, Radio, FormControlLabel} from '@material-ui/core'; 
 
@@ -50,7 +50,7 @@ export default function Export(props) {
                     <FormControlLabel value='Excel' control={<Radio color='primary'/>} label='Excel'/>
                     <FormControlLabel disabled={true} value='Image' control={<Radio color='primary'/>} label='Image'/>
                     <FormControlLabel value='PDF' control={<Radio color='primary'/>} label='PDF'/>
-                    <FormControlLabel value='Database' control={<Radio color='primary'/>} label='Database'/>
+                    <FormControlLabel disabled={true} value='Database' control={<Radio color='primary'/>} label='Database'/>
                 </RadioGroup>
             </DialogContent>
 

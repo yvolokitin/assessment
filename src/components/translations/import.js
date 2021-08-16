@@ -1,4 +1,4 @@
-﻿// save translations
+// save translations
 export const json_import = {
     // English
     'en': {

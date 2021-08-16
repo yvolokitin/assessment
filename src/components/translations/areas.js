@@ -1,4 +1,4 @@
-﻿// areas translation
+// areas translation
 export const areas = {
     // English
     'en': {

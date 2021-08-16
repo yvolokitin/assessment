@@ -1,4 +1,4 @@
-﻿// menu translations
+// menu translations
 export const menu = {
     // English
     'en': {

@@ -1,4 +1,4 @@
-﻿import {practises} from './practises';
+import {practises} from './practises';
 
 import {questions} from './../translations/questions';
 import {recommends} from './../translations/recommends';

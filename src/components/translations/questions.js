@@ -1,4 +1,4 @@
-﻿// questions translation
+// questions translation
 export const questions = {
     // English
     'en': {

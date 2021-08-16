@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 import {Badge, Avatar} from '@material-ui/core';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';

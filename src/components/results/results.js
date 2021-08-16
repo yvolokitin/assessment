@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Dialog, Slide, Button} from '@material-ui/core';
 
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -57,7 +57,7 @@ function PractiseLine(props) {
             }
         }
 
-    }, [props.practise, props.title]);
+    }, [ props.practise, props.title, props.number ]);
 
     return (
         <>

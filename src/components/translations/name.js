@@ -1,4 +1,4 @@
-﻿// name translations
+// name translations
 export const name = {
     // English
     'en': {

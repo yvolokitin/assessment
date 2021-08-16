@@ -1,4 +1,4 @@
-﻿// contacts translations
+// contacts translations
 export const contacts = {
     // English
     'en': {

@@ -1,4 +1,4 @@
-﻿import practise_requirements_image from './../../images/requirements.png';
+import practise_requirements_image from './../../images/requirements.png';
 import practise_code_quality_image from './../../images/code_quality_review.png';
 import practise_release_strategy_image from './../../images/gs1_global_tree_icon_graphic.png';
 

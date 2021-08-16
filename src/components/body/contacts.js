@@ -1,8 +1,7 @@
-﻿import React from 'react';
-import {Dialog, Slide, Typography, Button} from '@material-ui/core';
+import React from 'react';
+import {Dialog, Slide, Button} from '@material-ui/core';
 
 import CancelIcon from '@material-ui/icons/Cancel';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 import ColorLine from './../line/line';
 import Title from './../dialog/title';

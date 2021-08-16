@@ -1,11 +1,5 @@
-﻿import React from 'react';
+import React from 'react';
 import {Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField, Button} from '@material-ui/core';
-
-import CancelIcon from '@material-ui/icons/Cancel';
-import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
-
-import ColorLine from './../line/line';
-import Title from './../dialog/title';
 
 import {name} from './../translations/name';
 

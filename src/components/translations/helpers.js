@@ -1,4 +1,4 @@
-﻿// questions games translation
+// questions games translation
 export const helpers = {
     // English
     'en': {

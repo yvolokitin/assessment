@@ -1,4 +1,4 @@
-﻿// info games translation
+// info games translation
 export const info = {
     // English
     'en': {
