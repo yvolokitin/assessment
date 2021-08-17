@@ -12,6 +12,6 @@ code {
 }
 
 @font-face {
-  font-family: 'TeleGrotesk';
-  src: local('TeleGrotesk'), url(./fonts/TeleGroteskHeadline-Ultra.ttf) format('truetype');
+  font-family: 'Arial Rounded MT Bold';
+  src: local('Arial Rounded MT Bold'), url(./fonts/arlrdbd.ttf) format('truetype');
 }

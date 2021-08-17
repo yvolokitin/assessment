@@ -22,10 +22,6 @@ import operation_image from './../../images/operation_icon.jpg';
 import exploration_image from './../../images/exploration.png';
 import release_on_demand_image from './../../images/releases.jpg';
 
-import robotics_image from './../../images/robot.jpg';
-import practise_safe_deployment_image from './../../images/safe_deployment.png';
-import practise_safe_integration_image from './../../images/safe_integration.png';
-
 export const practise_automation_questions = [
     {
         'question': 'practise_automation_q1',
@@ -675,49 +671,6 @@ export const practise_integration_questions = [
     },
 ];
 
-export const practise_safe_integration_questions = [
-    {
-        'question': 'practise_safe_integration_q1',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Builds are run fewer than once per iteration and/or are completely manual.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Builds are run once per iteration and are partially automated. Dev branches are open for a month or more and builds break often.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Automated builds run once a day. Broken builds are corrected in 2-4 hours. Manual unit tests are run against each build. Dev branches are open for 2-4 weeks.'},
-            {'value': '15.Run', 'label': 'Run (15): Builds run automatically upon code commit; broken builds are corrected within 1 hour; automated unit tests are run against each build; dev branches are merged to trunk every iteration. '},
-            {'value': '25.Fly', 'label': 'Fly (25): Builds run on every commit; builds include static code analysis and security testing; gated commits prevent defects from entering the version control; dev branches are merged to trunk on every commit.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_integration_q2',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): The team backlog does not exist or is not used to manage daily work.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Stories are either incomplete or too verbose; unit tests are generally not written; peer reviews are not conducted.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Stories are complete; most changes have unit tests; peer reviews are usually conducted.'},
-            {'value': '15.Run', 'label': 'Run (15): Code is checked in daily; unit test coverage is 80%+; peer reviews are always conducted.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Code is checked in multiple times per day; tests are written before code (TDD); pair work and other Built-in quality practices are the norm.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_integration_q3',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): No staging environment exists or we use a test environment for staging.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Features are deployed manually to a staging environment once every PI.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Features are deployed to a staging environment once per month and demonstrated to Product Management.'},
-            {'value': '15.Run', 'label': 'Run (15): Features and infrastructure are auto-deployed to a staging environment every iteration and accepted by Product Management.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Stories, changes and infrastructure are auto-deployed to a staging environment, validated, and immediately proceed to deployment.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_integration_q4',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): No staging environment exists or we use a test environment for staging.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Features are deployed manually to a staging environment once every PI.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Features are deployed to a staging environment once per month and demonstrated to Product Management.'},
-            {'value': '15.Run', 'label': 'Run (15): Features and infrastructure are auto-deployed to a staging environment every iteration and accepted by Product Management.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Stories, changes and infrastructure are auto-deployed to a staging environment, validated, and immediately proceed to deployment.'}
-        ]
-    },
-];
-
 export const practise_deployment_questions = [
     {
         'question': 'practise_deployment_q1',
@@ -780,49 +733,6 @@ export const practise_deployment_questions = [
         'options': [
             {'value': '0.No', 'label': 'No'},
             {'value': '10.Yes', 'label': 'Yes'},
-        ]
-    },
-];
-
-export const practise_safe_deployment_questions = [
-    {
-        'question': 'practise_safe_deployment_q1',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Features are deployed to production every 3+ months; deployments are manual and painful; "deployed" implies "released".'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Features are deployed to production at PI boundaries; deployments are mostly manual; "deployed" implies "released".'},
-            {'value': '10.Walk', 'label': 'Walk (10): Features are deployed to production every iteration; deployments are mostly automated; some features can be deployed without being released.'},
-            {'value': '15.Run', 'label': 'Run (15): Features are deployed to production every iteration and fully automated through the pipeline; dark releases are common.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Features are deployed continuously throughout each iteration; Dev teams initiate deployments directly via pipeline tools; release is completely decoupled from deployment; dark releases are the norm.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_deployment_q2',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): No feature level production monitoring exists; only infrastructure monitoring is in place.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Features only log faults and exceptions; analyzing events involves manually correlating logs from multiple systems.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Features log faults, user activity and other events; data is analyzed manually to investigate incidents and measure business value of Features.'},
-            {'value': '15.Run', 'label': 'Run (15): Full-stack monitoring is in place; events can be correlated throughout the architecture; data is presented through system-specific dashboards.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Federated monitoring platform provides one-stop access to full-stack insights; data is used to gauge system performance and business value.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_deployment_q3',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Customers find issues before we do; resolving high priority issues is time consuming and reactive; customers have low confidence in our ability to recover from production issues.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Operations owns production issues; development involvement requires significant escalation; teams blame each other in times of crisis.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Development and Operations collectively own the incident resolution process; recovering from major incidents is reactive but a team effort.'},
-            {'value': '15.Run', 'label': 'Run (15): Our monitoring systems detect most issues before our customers do; Dev and Ops work proactively to recover from major incidents.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Our monitoring systems alert us to dangerous conditions based on carefully-designed tolerance thresholds; Developers are responsible for supporting their own code and proactively issue fixes through the pipeline before users are affected.'}
-        ]
-    },
-    {
-        'question': 'practise_safe_deployment_q4',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Deployments are not verified in production before being released to end users.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Deployments are verified with manual smoke tests and/or user acceptance testing (UAT); we address deployment issues within a stated grace/triage/warranty period; we often correct issues directly in production.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Deployments are verified with manual tests prior to releasing to end users; rolling back is painful or impossible; we do not make changes directly in production.'},
-            {'value': '15.Run', 'label': 'Run (15): Deployments are verified using automated smoke tests, synthetic transactions and penetration tests prior to release; we can easily roll back or fix forward to recover from failed deployments.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Automated production tests run on an ongoing basis and feed monitoring systems; failed deployments can be rolled back instantly or fixed forward through the entire pipeline.'}
         ]
     },
 ];
@@ -1605,9 +1515,6 @@ export const practises = [
     {num: '16', uid: 'practise_operation', image: operation_image, questions: practise_operation_questions},
     {num: '17', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
     {num: '18', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
-    {num: '19', uid: 'practise_robotics_and_ai', image: robotics_image, questions: practise_robotics_questions},
-    {num: '20', uid: 'practise_safe_integration_questions', image: practise_safe_integration_image, questions: practise_safe_integration_questions},
-    {num: '21', uid: 'practise_safe_deployment_questions', image: practise_safe_deployment_image, questions: practise_safe_deployment_questions},
 ];
 
 export const practises_autotest = [
@@ -1645,11 +1552,4 @@ export const practises_cicd = [
     {num: '9', uid: 'practise_deployment', image: practise_deployment_image, questions: practise_deployment_questions},
     {num: '17', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
     {num: '18', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
-    {num: '20', uid: 'practise_safe_integration_questions', image: practise_safe_integration_image, questions: practise_safe_integration_questions},
-    {num: '21', uid: 'practise_safe_deployment_questions', image: practise_safe_deployment_image, questions: practise_safe_deployment_questions},
-];
-
-
-export const practises_rai = [
-    {num: '19', uid: 'practise_robotics_and_ai', image: robotics_image, questions: practise_robotics_questions},
 ];

@@ -46,9 +46,9 @@
     text-align: center;
     user-select: none;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    font-family: TeleGrotesk,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-family: 'Arial Rounded MT Bold';
     background-color: #fbfbf8;
 }
 .card_wrapper_btn {
@@ -65,12 +65,12 @@
 
     font-size: 14px;
     font-weight: bold;
-    font-family: TeleGrotesk,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-family: 'Arial Rounded MT Bold';
 }
 .card_button {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    font-family: TeleGrotesk,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-family: 'Arial Rounded MT Bold';
 }
 
 @-moz-keyframes numbers360rotation { 100% { -moz-transform: rotate(360deg); } }

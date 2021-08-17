@@ -34,9 +34,9 @@ import {menu} from './components/translations/menu';
 import {areas} from './components/translations/areas';
 
 import {export_json, remove_all_answers_from_localstorage} from './components/helpers/functions';
-import {practises, practises_autotest, practises_processes, practises_autoops, practises_cicd, practises_rai} from './components/helpers/practises';
+import {practises, practises_autotest, practises_processes, practises_autoops, practises_cicd} from './components/helpers/practises';
 
-import t_image from './images/t_logo.jpg';
+import icon_image from './images/assesment.png';
 
 import './App.css';
 
@@ -309,7 +309,7 @@ export default function App(props) {
 
             <div className='header_div'>
                 <div className='header_div_left'>
-                    <img className='header_div_left_link' src={t_image} alt='T-logo' onClick={handleMenuClick} onContextMenu={(e) => e.preventDefault()}/>
+                    <img className='header_div_left_link' src={icon_image} alt='T-logo' onClick={handleMenuClick} onContextMenu={(e) => e.preventDefault()}/>
 
                     <Menu anchorEl={anchorEl} keepMounted open={open} onClose={handleMenuClose} TransitionComponent={Fade}>
                         <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/'> Home </Link> </MenuItem>
@@ -321,10 +321,9 @@ export default function App(props) {
                         <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/rai'> Robotics and Artificial Intelligence </Link> </MenuItem>
                     </Menu>
 
-                    <font id='fw_name_id'  onClick={() => setScreen(STATUS.NAME)}>{name}</font>
                 </div>
                 <div className='header_div_right'>
-                    CHECK YOURSELF
+                    ASSESMENT
                 </div>
             </div>
 
@@ -335,19 +334,13 @@ export default function App(props) {
                             <HelpOutlineRoundedIcon id='fw_help_id'
                                 onClick={() => setScreen(STATUS.HELP)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
-                        </LightTooltip>
-                        <LightTooltip title={menu[lang]['contacts']}>
-                            <MailOutlineIcon id='fw_contact_id'
-                                onClick={() => setScreen(STATUS.CONTACTS)}
-                                className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
+                                color='action' fontSize='large'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['benefits']}>
-                            <Link href={reference} style={{height: '100%', marginLeft: '5%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end',}}>
+                            <Link href={reference} style={{height: '100%', marginLeft: '8%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end',}}>
                                 <AcUnitIcon id='fw_benefits_id'
                                     className='header_div_right_icon'
-                                    color='secondary' fontSize='medium'/>
+                                    color='action' fontSize='large'/>
                             </Link>
                         </LightTooltip>
                     </div>
@@ -363,40 +356,26 @@ export default function App(props) {
                             <TrendingUpIcon id='fw_results_id'
                                 onClick={() => setScreen(STATUS.RESULTS)}
                                 className='header_div_right_icon_assesment'
-                                color='secondary' fontSize='medium'/>
-                        </LightTooltip>
-                        <LightTooltip title={menu[lang]['language']}>
-                            <LanguageIcon id='fw_language_id'
-                                onClick={() => setScreen(STATUS.LANGUAGE)}
-                                className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
+                                color='action' fontSize='large'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['import']}>
                             <ImportExportIcon id='fw_import_id'
                                 onClick={() => setScreen(STATUS.IMPORT)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
+                                color='action' fontSize='large'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['export']}>
                             <SaveIcon id='fw_export_id'
                                 onClick={() => setScreen(STATUS.EXPORT)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
+                                color='action' fontSize='large'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['delete']}>
                             <DeleteIcon  id='fw_remove_id'
                                 onClick={() => setScreen(STATUS.DELETE)}
                                 className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
+                                color='action' fontSize='large'/>
                         </LightTooltip>
-
-                        <LightTooltip title={menu[lang]['login']}>
-                            <AccountCircleIcon  id='fw_login_id'
-                                onClick={() => setScreen(STATUS.LOGIN)}
-                                className='header_div_right_icon'
-                                color='secondary' fontSize='medium'/>
-                        </LightTooltip>
-
                     </div>
                 </div>
 
@@ -462,20 +441,6 @@ export default function App(props) {
                             </div>
                         </Route>
 
-                        <Route path='/rai'>
-                            <div className='tasks_wrapper'>
-                                {practises_rai.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
-                        </Route>
-
                         <Route path='/'>
                             <div className='tasks_wrapper'>
                                 {practises.map((practise) => 
@@ -494,7 +459,7 @@ export default function App(props) {
             </div>
 
             <div className='tasks_waver'>
-                <Wave mask='url(#mask)' fill={'#e20074'}>
+                <Wave mask='url(#mask)' fill={'#2596be'}>
                     <defs>
                         <linearGradient id='gradient' gradientTransform='rotate(90)'>
                             <stop offset='0' stopColor='white' />
@@ -508,7 +473,7 @@ export default function App(props) {
             </div>
 
             <div className='footer_wrapper'>
-                {'© Deutsche Telekom AG '}
+                {'© Copyright '}
                 {new Date().getFullYear()}
                 &nbsp; &#124; &nbsp;
                 <Link color='inherit' href={''}> Help &#38; Contact </Link> 
