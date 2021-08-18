@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import { CssBaseline, Menu, MenuItem, Link, Tooltip, Fade } from '@material-ui/core';
+import { CssBaseline, Link, Tooltip } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import LanguageIcon from '@material-ui/icons/Language';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SaveIcon from '@material-ui/icons/Save';
@@ -34,7 +31,7 @@ import {menu} from './components/translations/menu';
 import {areas} from './components/translations/areas';
 
 import {export_json, remove_all_answers_from_localstorage} from './components/helpers/functions';
-import {practises, practises_autotest, practises_processes, practises_autoops, practises_cicd} from './components/helpers/practises';
+import {practises} from './components/helpers/practises';
 
 import icon_image from './images/assesment.png';
 
@@ -294,14 +291,11 @@ export default function App(props) {
             }
     }
 
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
-    const handleMenuClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-    };
+    const onRefresh = (event) => {
+        event.preventDefault();
+        setReference('/');
+        window.location.reload();
+    }
 
     return (
         <React.Fragment>
@@ -309,17 +303,8 @@ export default function App(props) {
 
             <div className='header_div'>
                 <div className='header_div_left'>
-                    <img className='header_div_left_link' src={icon_image} alt='T-logo' onClick={handleMenuClick} onContextMenu={(e) => e.preventDefault()}/>
-
-                    <Menu anchorEl={anchorEl} keepMounted open={open} onClose={handleMenuClose} TransitionComponent={Fade}>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/'> Home </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/benefits'> Benifits </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/autotest'> Test Automation </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/processes'> Processes and Interaction </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/autoops'> Automation of Operation </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/cicd'> Continues Integration and Deployment </Link> </MenuItem>
-                        <MenuItem onClick={handleMenuClose}> <Link color='secondary' href='/rai'> Robotics and Artificial Intelligence </Link> </MenuItem>
-                    </Menu>
+                    <img className='header_div_left_link' src={icon_image} alt='Assesment logo'
+                        onClick={onRefresh} onContextMenu={(e) => e.preventDefault()}/>
 
                 </div>
                 <div className='header_div_right'>
@@ -383,62 +368,6 @@ export default function App(props) {
                     <Switch>
                         <Route path='/benefits'>
                             <Benefits width={width} lang={lang}/>
-                        </Route>
-
-                        <Route path='/autotest'>
-                            <div className='tasks_wrapper'>
-                                {practises_autotest.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
-                        </Route>
-
-                        <Route path='/processes'>
-                            <div className='tasks_wrapper'>
-                                {practises_processes.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
-                        </Route>
-
-                        <Route path='/autoops'>
-                            <div className='tasks_wrapper'>
-                                {practises_autoops.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
-                        </Route>
-
-                        <Route path='/cicd'>
-                            <div className='tasks_wrapper'>
-                                {practises_cicd.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
                         </Route>
 
                         <Route path='/'>

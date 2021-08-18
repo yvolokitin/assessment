@@ -15,7 +15,6 @@ import practise_component_test_image from './../../images/component.png';
 
 import practise_smoke_regression_image from './../../images/system_test.png';
 import practise_nft_image from './../../images/non_functional.png';
-import practise_sap_image from './../../images/sap_image.jpg';
 
 import monitoring_image from './../../images/monitoring_icon.jpg';
 import operation_image from './../../images/operation_icon.jpg';
@@ -919,142 +918,6 @@ export const practise_non_functional = [
     },
 ];
 
-export const practise_sap_questions = [
-    {
-        'question': 'practise_sap_q1',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_sap_q2',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.Manual', 'label': 'Manual'},
-            {'value': '5.Automatic', 'label': 'Automatic'}]
-    },
-    {
-        'question': 'practise_sap_q3',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_sap_q4',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q5',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes, ~10-49%', 'label': 'Yes, ~10-49%'},
-            {'value': '3.Yes, ~50-90%', 'label': 'Yes, ~50-90%'},
-            {'value': '5.Yes, 100%', 'label': 'Yes, 100%'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q6',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.Manual', 'label': 'Manual'},
-            {'value': '5.SolMan_Transport', 'label': 'SolMan / Transport'}]
-    },
-    {
-        'question': 'practise_sap_q7',
-        'options': [
-            {'value': '0.N/A', 'label': 'N/A'},
-            {'value': '3.> 1 hour', 'label': 'more 1 hour'},
-            {'value': '4.< 1 hour', 'label': 'less 1 hour'},
-            {'value': '5.< 5 min', 'label': 'less 5 min'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q8',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.Yes', 'label': 'Yes'},
-            {'value': '5.No', 'label': 'No'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q9',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '8.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q10',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q11',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q12',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q13',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '8.Yes', 'label': 'Yes'},
-        ]
-    },
-
-    {
-        'question': 'practise_sap_q14',
-        'options': [
-            {'value': '0.N/A', 'label': 'N/A'},
-            {'value': '1.Per Major Release', 'label': 'Per Major Release'},
-            {'value': '2.Per any Release', 'label': 'Per any Release'},
-            {'value': '3.Per Delivery', 'label': 'Per Delivery'},
-            {'value': '4.Daily', 'label': 'Daily'},
-            {'value': '5.Per Commit', 'label': 'Per Commit'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q15',
-        'options': [
-            {'value': '0.No automated Regression', 'label': 'No'},
-            {'value': '3.< 30%', 'label': '< 30%'},
-            {'value': '6.30%-70%', 'label': '30%-80%'},
-            {'value': '8.>=80%', 'label': '>=80%'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q16',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '8.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_sap_q17',
-        'options': [
-            {'value': '0.N/A', 'label': 'N/A'},
-            {'value': '3.> 12h', 'label': 'more 12h'},
-            {'value': '6.< 12h', 'label': 'less 12h'},
-            {'value': '8.< 4h', 'label': 'less 4h'},
-        ]
-    },
-];
-
 export const practise_monitoring_questions = [
     {
         'question': 'practise_monitoring_q1',
@@ -1441,61 +1304,6 @@ export const practise_release_on_demand_questions = [
     },
 ];
 
-export const practise_robotics_questions = [
-    {
-        'question': 'practise_robotics_q1',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '20.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_robotics_q2',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '15.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_robotics_q3',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '15.Yes', 'label': 'Yes'},
-        ]
-    },
-    {
-        'question': 'practise_robotics_q4',
-        'options': [
-            {'value': '0.No', 'label': 'No robots in live env'},
-            {'value': '3.1-10', 'label': '1-10'},
-            {'value': '5.10-20', 'label': '10-20'},
-            {'value': '10.20-30', 'label': '20-30'},
-            {'value': '15.30-40', 'label': '30-40'},
-            {'value': '18.40-50', 'label': '40-50'},
-            {'value': '20.50+', 'label': 'Over 50'},
-        ]
-    },
-    {
-        'question': 'practise_robotics_q5',
-        'options': [
-            {'value': '0.No', 'label': 'No potential'},
-            {'value': '20.Yes', 'label': 'Lot of potential'},
-        ]
-    },
-    {
-        'question': 'practise_robotics_q6',
-        'options': [
-            {'value': '2.Self', 'label': 'Self development'},
-            {'value': '5.RnAI dev', 'label': 'Using RnAI hub for RPA development'},
-            {'value': '7.RnAI res', 'label': 'Using RnAI hub for support for internal resources'},
-            {'value': '9.Another support', 'label': 'Using support from another hub/domain'},
-            {'value': '10.No automation', 'label': 'No automated processes used'},
-        ]
-    },
-];
-
-
-
 export const practises = [
     {num: '1', uid: 'practise_automation', image: practise_automation_image, questions: practise_automation_questions},
     {num: '2', uid: 'practise_unit_test', image: practise_unit_test_image, questions: practise_unit_test_questions},
@@ -1510,46 +1318,9 @@ export const practises = [
     {num: '11', uid: 'practise_requirements', image: practise_requirements_image, questions: practise_requirements_questions},
     {num: '12', uid: 'practise_docs_logs', image: practise_docs_logs_image, questions: practise_docs_logs_questions},
     {num: '13', uid: 'practise_non_functional', image: practise_nft_image, questions: practise_non_functional},
-    {num: '14', uid: 'practise_sap', image: practise_sap_image, questions: practise_sap_questions},
-    {num: '15', uid: 'practise_monitoring', image: monitoring_image, questions: practise_monitoring_questions},
-    {num: '16', uid: 'practise_operation', image: operation_image, questions: practise_operation_questions},
-    {num: '17', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
-    {num: '18', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
+    {num: '14', uid: 'practise_monitoring', image: monitoring_image, questions: practise_monitoring_questions},
+    {num: '15', uid: 'practise_operation', image: operation_image, questions: practise_operation_questions},
+    {num: '16', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
+    {num: '17', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
 ];
 
-export const practises_autotest = [
-    {num: '1', uid: 'practise_automation', image: practise_automation_image, questions: practise_automation_questions},
-    {num: '2', uid: 'practise_unit_test', image: practise_unit_test_image, questions: practise_unit_test_questions},
-    {num: '3', uid: 'practise_component_test', image: practise_component_test_image, questions: practise_component_test_questions},
-    {num: '4', uid: 'practise_smoke_regression', image: practise_smoke_regression_image, questions: practise_smoke_regression_questions},
-    //{num: '6', uid: 'practise_testcase_management', image: practise_testcase_management_image, questions: practise_testcase_management_questions},
-    //{num: '7', uid: 'practise_defect_management', image: practise_defect_management_image, questions: practise_defect_management_questions},
-    //{num: '10', uid: 'practise_release_strategy', image: practise_release_strategy_image, questions: practise_release_strategy_questions},
-    {num: '13', uid: 'practise_non_functional', image: practise_nft_image, questions: practise_non_functional},
-    //{num: '14', uid: 'practise_sap', image: practise_sap_image, questions: practise_sap_questions},
-];
-
-export const practises_processes = [
-    {num: '5', uid: 'practise_code_quality_and_review', image: practise_code_quality_image, questions: practise_code_quality_questions},
-    {num: '6', uid: 'practise_testcase_management', image: practise_testcase_management_image, questions: practise_testcase_management_questions},
-    {num: '7', uid: 'practise_defect_management', image: practise_defect_management_image, questions: practise_defect_management_questions},
-    //{num: '10', uid: 'practise_release_strategy', image: practise_release_strategy_image, questions: practise_release_strategy_questions},
-    {num: '11', uid: 'practise_requirements', image: practise_requirements_image, questions: practise_requirements_questions},
-    //{num: '12', uid: 'practise_docs_logs', image: practise_docs_logs_image, questions: practise_docs_logs_questions},
-    {num: '14', uid: 'practise_sap', image: practise_sap_image, questions: practise_sap_questions},
-];
-
-export const practises_autoops = [
-    {num: '15', uid: 'practise_monitoring', image: monitoring_image, questions: practise_monitoring_questions},
-    {num: '16', uid: 'practise_operation', image: operation_image, questions: practise_operation_questions},
-    {num: '12', uid: 'practise_docs_logs', image: practise_docs_logs_image, questions: practise_docs_logs_questions},
-    {num: '10', uid: 'practise_release_strategy', image: practise_release_strategy_image, questions: practise_release_strategy_questions},
-];
-
-
-export const practises_cicd = [
-    {num: '8', uid: 'practise_integration', image: practise_integration_image, questions: practise_integration_questions},
-    {num: '9', uid: 'practise_deployment', image: practise_deployment_image, questions: practise_deployment_questions},
-    {num: '17', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
-    {num: '18', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
-];
