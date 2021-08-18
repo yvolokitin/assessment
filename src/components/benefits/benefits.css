@@ -6,8 +6,10 @@
 }
 .benefits_card {
     width: 80%;
-    margin: 2%;
-    padding: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     transition: background-color 2s;
     background-color: white;
     border-radius: 5px;

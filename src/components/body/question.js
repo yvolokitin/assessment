@@ -24,7 +24,7 @@ export default function Question(props) {
 
         if (question !== null && question.length > 0) {
             setValue(localStorage.getItem(props.question));
-            setColor('#efefef');
+            setColor('#efffef');
         }
 
         if (helpers[props.lang][props.question] !== undefined) {
@@ -33,22 +33,20 @@ export default function Question(props) {
 
     }, [props.lang, props.question, props.title, ]);
 
-    /*
-                    <FormControlLabel value='0' control={<Radio color='primary'/>} label='No'/>
-                    <FormControlLabel value='1' control={<Radio color='primary'/>} label='Yes'/>
-    */
     return (
         <div className='question_wrapper'>
             <FormControl component='fieldset' className='question_form' style={{backgroundColor: color}}>
                 <FormLabel component='legend' className='question_title'
-                    style={{color: '#446600', fontFamily: 'TeleGrotesk,sans-serif', fontSize: '20px',}}>
+                    style={{color: '#446600', fontFamily: 'Arial Rounded MT Bold', fontSize: '21px',}}>
                         {questions[props.lang][props.question]}
                 </FormLabel>
 
-                <RadioGroup row value={value} className='question_radio' onChange={handleChange}>
+                <RadioGroup row value={value} className='question_radio' style={{fontFamily: 'Arial Rounded MT Bold'}} onChange={handleChange}>
                     {props.options.map(
                         (option) => 
                             <FormControlLabel key={option['value']}
+                                style={{fontFamily: 'Arial Rounded MT Bold'}}
+                                className='question_radio_option' 
                                 value={option['value']}
                                 label={option['label']}
                                 control={<Radio color='primary'/>}/>

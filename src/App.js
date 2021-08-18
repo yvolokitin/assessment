@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { CssBaseline, Link, Tooltip } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
@@ -13,7 +11,6 @@ import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SaveIcon from '@material-ui/icons/Save';
 
 import Benefits from './components/benefits/benefits';
-
 import Language from './components/header/language';
 import Discovery from './components/body/discovery';
 import Contacts from './components/body/contacts';
@@ -66,8 +63,6 @@ const STATUS = {
 }
 
 export default function App(props) {
-    const [reference, setReference] = useState('');
-
     const [screen, setScreen] = useState(STATUS.NONE);
     const [points, setPoints] = useState([]);
     const [image, setImage] = useState('');
@@ -86,21 +81,6 @@ export default function App(props) {
 
     useEffect(() => {
         console.log('Location ' + window.location);
-
-        if (window.location.toString().indexOf('benefits') > 0) {
-            setReference('/');
-
-        } else {
-            setReference('/benefits');
-        }
-
-        var local_name = localStorage.getItem('name');
-        if (local_name === null || local_name === '') {
-            setName('Assesment');
-        } else {
-            setName(local_name);
-        }
-
         recalculateScore();
 
     }, [ ]);
@@ -293,7 +273,6 @@ export default function App(props) {
 
     const onRefresh = (event) => {
         event.preventDefault();
-        setReference('/');
         window.location.reload();
     }
 
@@ -303,9 +282,7 @@ export default function App(props) {
 
             <div className='header_div'>
                 <div className='header_div_left'>
-                    <img className='header_div_left_link' src={icon_image} alt='Assesment logo'
-                        onClick={onRefresh} onContextMenu={(e) => e.preventDefault()}/>
-
+                    <img src={icon_image} alt='Assesment logo' onClick={onRefresh} onContextMenu={(e) => e.preventDefault()}/>
                 </div>
                 <div className='header_div_right'>
                     ASSESMENT
@@ -314,7 +291,7 @@ export default function App(props) {
 
             <div className='body_wrapper'>
                 <div className='tabs_wrapper'>
-                    <div className='header_div_left'>
+                    <div className='tabs_wrapper_left'>
                         <LightTooltip title={menu[lang]['help']}>
                             <HelpOutlineRoundedIcon id='fw_help_id'
                                 onClick={() => setScreen(STATUS.HELP)}
@@ -322,14 +299,13 @@ export default function App(props) {
                                 color='action' fontSize='large'/>
                         </LightTooltip>
                         <LightTooltip title={menu[lang]['benefits']}>
-                            <Link href={reference} style={{height: '100%', marginLeft: '8%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end',}}>
-                                <AcUnitIcon id='fw_benefits_id'
-                                    className='header_div_right_icon'
-                                    color='action' fontSize='large'/>
-                            </Link>
+                            <AcUnitIcon id='fw_benefits_id'
+                                onClick={() => setScreen(STATUS.BENEFITS)}
+                                className='header_div_right_icon'
+                                color='action' fontSize='large'/>
                         </LightTooltip>
                     </div>
-                    <div className='header_div_right'>
+                    <div className='tabs_wrapper_right'>
                         <LightTooltip title={menu[lang]['assesment']}>
                             <font id='fw_results_text_id'
                                 onClick={() => setScreen(STATUS.RESULTS)}
@@ -364,27 +340,17 @@ export default function App(props) {
                     </div>
                 </div>
 
-                <BrowserRouter>
-                    <Switch>
-                        <Route path='/benefits'>
-                            <Benefits width={width} lang={lang}/>
-                        </Route>
-
-                        <Route path='/'>
-                            <div className='tasks_wrapper'>
-                                {practises.map((practise) => 
-                                    <Card key={practise.uid}
-                                        uid={practise.uid}
-                                        title={areas[lang][practise.uid]}
-                                        image={practise.image}
-                                        width={width}
-                                        lang={lang}
-                                        onUpdate={onOpen}/>
-                                )}
-                            </div>
-                        </Route>
-                    </Switch>
-                </BrowserRouter>
+                <div className='tasks_wrapper'>
+                    {practises.map((practise) => 
+                        <Card key={practise.uid}
+                            uid={practise.uid}
+                            title={areas[lang][practise.uid]}
+                            image={practise.image}
+                            width={width}
+                            lang={lang}
+                            onUpdate={onOpen}/>
+                        )}
+                </div>
             </div>
 
             <div className='tasks_waver'>
@@ -448,6 +414,14 @@ export default function App(props) {
                 lang={lang}/>
 
             <Discovery open={screen === STATUS.DISCOVERY}
+                onUpdate={onStatus}
+                points={points}
+                image={image}
+                width={width} 
+                lang={lang}
+                uid={uid}/>
+
+            <Benefits open={screen === STATUS.BENEFITS}
                 onUpdate={onStatus}
                 points={points}
                 image={image}

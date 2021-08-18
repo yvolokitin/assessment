@@ -86,7 +86,7 @@ export default function Discovery(props) {
         <Dialog id='fw_discovery_screen_id' open={props.open} fullScreen={true} TransitionComponent={Transition} transitionDuration={900}>
             <Title title={areas[props.lang][props.uid]} src={props.image} onClose={() => props.onUpdate('close')}/>
 
-            <div className='discovery_wrapper_btn'>
+            <div className='discovery_wrapper_line'>
                 <ColorLine/>
             </div>
 
@@ -102,7 +102,7 @@ export default function Discovery(props) {
                 <ColorLine margin='15px'/>
             </div>
 
-            <div className='discovery_wrapper_btn'>
+            <div className='discovery_wrapper_btn' style={{marginTop: '13px'}}>
                 <TextField className='discovery_textarea' value={comments} variant='outlined'
                     onChange={onComments} label={'Add comments to ' + areas[props.lang][props.uid]}/>
             </div>
