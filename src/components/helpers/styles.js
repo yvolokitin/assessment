@@ -63,9 +63,10 @@ export const useStyles = makeStyles((theme) => ({
     header: {
         width: '100%',
         color: '#404040',
-        fontSize: '20px',
+        fontSize: '26px',
+        fontWeight: 'bold',
         textAlign: 'center',
-        fontFamily: 'TeleGrotesk,\'Helvetica Neue\',Helvetica,Arial,\'Lucida Grande\',sans-serif',
+        fontFamily: 'Arial Rounded MT Bold',
     },
     footer: {
         width: '100%',

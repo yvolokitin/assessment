@@ -218,57 +218,55 @@ export default function App(props) {
     }
 
     function recalculateScore() {
-        // console.log('recalculateScore: ' + name + ', percent: ' + percent);
-        if ((localStorage.getItem('practise_automation') && localStorage.getItem('practise_unit_test') &&
-            localStorage.getItem('practise_smoke_regression') && localStorage.getItem('practise_component_test')) ||
-            (localStorage.getItem('practise_automation') && localStorage.getItem('practise_sap'))) {
-                var whole_percent = 0, counter = 0;
-                for (var p = 0; p < practises.length; p++) {
-                    var tmp_percent = localStorage.getItem(practises[p].uid);
-                    if (tmp_percent !== null) {
-                        if (parseInt(tmp_percent) >= 0) {
-                            whole_percent = whole_percent + parseInt(tmp_percent);
-                            counter = counter + 1;
-                        }
-                    }
+        var whole_percent = 0, counter = 0;
+
+        for (var p = 0; p < practises.length; p++) {
+            var tmp_percent = localStorage.getItem(practises[p].uid);
+            if (tmp_percent !== null) {
+                if (parseInt(tmp_percent) >= 0) {
+                    whole_percent = whole_percent + parseInt(tmp_percent);
+                    counter = counter + 1;
                 }
-
-                var final = parseInt(whole_percent/counter);
-                localStorage.setItem('percent', final);
-
-                setPercent(final); setPercentText(final + ' %');
-                console.log('Percent ' + final);
-
-                if (final > 95) {
-                    setLevel('Matured'); setColor('#007acc');
-                    localStorage.setItem('level', 'Matured');
-                } else if (final > 75) {
-                    setLevel('Advanced'); setColor('#009999');
-                    localStorage.setItem('level', 'Advanced');
-                } else if (final > 55) {
-                    setLevel('Defined'); setColor('#86b300');
-                    localStorage.setItem('level', 'Defined');
-                } else if (final > 30) {
-                    setLevel('Developing'); setColor('#cc6600');
-                    localStorage.setItem('level', 'Developing');
-                } else {
-                    setLevel('Beginning'); setColor('#b30000');
-                    localStorage.setItem('level', 'Beginning');
-                }
-
-                var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-                localStorage.setItem('date', utc); setAssestDate(utc);
-
-            } else {
-                setPercentText('N/A'); setPercent('N/A');
-                setLevel('Undefined'); setColor('red');
-                setAssestDate(0);
-
-                localStorage.setItem('percent', 'N/A');
-                localStorage.setItem('level', 'Undefined');
-                localStorage.setItem('color', 'red');
-                localStorage.setItem('date', '0');
             }
+        }
+
+        if (counter > 0) {
+            var final = parseInt(whole_percent/counter);
+            localStorage.setItem('percent', final);
+
+            setPercent(final); setPercentText(final + ' %');
+            console.log('Percent ' + final);
+
+            if (final > 95) {
+                setLevel('Matured'); setColor('#007acc');
+                localStorage.setItem('level', 'Matured');
+            } else if (final > 75) {
+                setLevel('Advanced'); setColor('#009999');
+                localStorage.setItem('level', 'Advanced');
+            } else if (final > 55) {
+                setLevel('Defined'); setColor('#86b300');
+                localStorage.setItem('level', 'Defined');
+            } else if (final > 30) {
+                setLevel('Developing'); setColor('#cc6600');
+                localStorage.setItem('level', 'Developing');
+            } else {
+                setLevel('Beginning'); setColor('#b30000');
+                localStorage.setItem('level', 'Beginning');
+            }
+
+            var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+            localStorage.setItem('date', utc); setAssestDate(utc);
+
+        } else {
+            setPercentText('N/A'); setPercent('N/A');
+            setLevel('Undefined'); setColor('red');
+            setAssestDate(0);
+
+            localStorage.setItem('percent', 'N/A');
+            localStorage.setItem('level', 'Undefined');
+            localStorage.setItem('color', 'red');
+            localStorage.setItem('date', '0');
+        }
     }
 
     const onRefresh = (event) => {

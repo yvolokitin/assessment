@@ -37,7 +37,7 @@ export default function Question(props) {
         <div className='question_wrapper'>
             <FormControl component='fieldset' className='question_form' style={{backgroundColor: color}}>
                 <FormLabel component='legend' className='question_title'
-                    style={{color: '#446600', fontFamily: 'Arial Rounded MT Bold', fontSize: '21px',}}>
+                    style={{color: '#446600', fontFamily: 'Arial Rounded MT Bold', fontWeight: 'bold', fontSize: '22px',}}>
                         {questions[props.lang][props.question]}
                 </FormLabel>
 

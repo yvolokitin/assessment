@@ -16,17 +16,12 @@ import practise_component_test_image from './../../images/component.png';
 import practise_smoke_regression_image from './../../images/system_test.png';
 import practise_nft_image from './../../images/non_functional.png';
 
-import monitoring_image from './../../images/monitoring_icon.jpg';
-import operation_image from './../../images/operation_icon.jpg';
-import exploration_image from './../../images/exploration.png';
-import release_on_demand_image from './../../images/releases.jpg';
-
 export const practise_automation_questions = [
     {
         'question': 'practise_automation_q1',
         'options': [
             {'value': '0.No', 'label': 'No'},
-            {'value': '15.Yes', 'label': 'Yes'}]
+            {'value': '10.Yes', 'label': 'Yes'}]
     },
     {
         'question': 'practise_automation_q2',
@@ -49,23 +44,41 @@ export const practise_automation_questions = [
     {
         'question': 'practise_automation_q5',
         'options': [
-            {'value': '0.Manually', 'label': 'Manually'},
-            {'value': '10.DB', 'label': 'DataBase Snapshot / Dump'},
-            {'value': '20.REST', 'label': 'Rest API calls / Automatically via UI'},
-            {'value': '15.MIX', 'label': 'Mix of DB / Rest / UI (automated)'},
-        ]
+            {'value': '0.No', 'label': 'No'},
+            {'value': '10.Yes', 'label': 'Yes'}]
     },
     {
         'question': 'practise_automation_q6',
         'options': [
             {'value': '0.No', 'label': 'No'},
-            {'value': '20.Yes', 'label': 'Yes'}]
+            {'value': '10.Yes', 'label': 'Yes'}]
     },
     {
         'question': 'practise_automation_q7',
         'options': [
             {'value': '0.No', 'label': 'No'},
-            {'value': '15.Yes', 'label': 'Yes'}]
+            {'value': '10.Yes', 'label': 'Yes'}]
+    },
+    {
+        'question': 'practise_automation_q8',
+        'options': [
+            {'value': '0.No', 'label': 'No'},
+            {'value': '10.Yes', 'label': 'Yes'}]
+    },
+    {
+        'question': 'practise_automation_q9',
+        'options': [
+            {'value': '0.No', 'label': 'No'},
+            {'value': '10.Yes', 'label': 'Yes'}]
+    },
+    {
+        'question': 'practise_automation_q10',
+        'options': [
+            {'value': '0.Manually', 'label': 'Manually'},
+            {'value': '5.DB', 'label': 'DataBase Snapshot / Dump'},
+            {'value': '10.REST', 'label': 'Rest API calls / Automatically via UI'},
+            {'value': '8.MIX', 'label': 'Mix of DB / Rest / UI (automated)'},
+        ]
     },
 ];
 
@@ -73,9 +86,7 @@ export const practise_unit_test_questions = [
     {
         'question': 'practise_unit_test_q1',
         'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
             {'value': '0.No', 'label': 'No'},
-            {'value': '5.Partially', 'label': 'Partially'},
             {'value': '15.Yes', 'label': 'Yes'},
         ]
     },
@@ -91,7 +102,7 @@ export const practise_unit_test_questions = [
         'question': 'practise_unit_test_q3',
         'options': [
             {'value': '0.No', 'label': 'No'},
-            {'value': '20.Yes', 'label': 'Yes'},
+            {'value': '10.Yes', 'label': 'Yes'},
         ]
     },
     {
@@ -120,7 +131,13 @@ export const practise_unit_test_questions = [
         'question': 'practise_unit_test_q7',
         'options': [
             {'value': '0.No', 'label': 'No'},
-            {'value': '5.Partially', 'label': 'Partially'},
+            {'value': '10.Yes', 'label': 'Yes'},
+        ]
+    },
+    {
+        'question': 'practise_unit_test_q8',
+        'options': [
+            {'value': '0.No', 'label': 'No'},
             {'value': '10.Yes', 'label': 'Yes'},
         ]
     },
@@ -918,391 +935,6 @@ export const practise_non_functional = [
     },
 ];
 
-export const practise_monitoring_questions = [
-    {
-        'question': 'practise_monitoring_q1',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '20.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q2',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '10.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q3',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '10.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q4',
-        'options': [
-            {'value': '0.0', 'label': '0 Points (Nothing)'},
-            {'value': '5.5', 'label': '5 Points'},
-            {'value': '10.10', 'label': '10 Points'},
-            {'value': '15.15', 'label': '15 Points (Optimal)'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q5',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '15.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q6',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '10.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q7',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '10.Yes', 'label': 'Yes'}
-        ]
-    },
-    {
-        'question': 'practise_monitoring_q8',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '10.Yes', 'label': 'Yes'}
-        ]
-    },
-];
-
-export const practise_operation_questions = [
-    {
-        'question': 'practise_operation_q1',
-        'options': [
-            {'value': '1.Retirement', 'label': 'Retirement'},
-            {'value': '1.Cloud', 'label': 'Cloud'},
-            {'value': '1.Same state', 'label': 'Same state'}]
-    },
-    {
-        'question': 'practise_operation_q2',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q3',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '6.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q4',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '6.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q5',
-        'options': [
-            {'value': '0.Nothing', 'label': 'Nothing'},
-            {'value': '3.Tool', 'label': 'Explain which Tool'}]
-    },
-    {
-        'question': 'practise_operation_q6',
-        'options': [
-            {'value': '0.0 Points', 'label': '0 Points'},
-            {'value': '1.Point', 'label': '1 Point'}]
-    },
-    {
-        'question': 'practise_operation_q7',
-        'options': [
-            {'value': 'NA.NA', 'label': 'N/A'},
-            {'value': '0.App/SFTP Server', 'label': 'APP/SFTP Server'},
-            {'value': '3.Lieferserver', 'label': 'Lieferserver'}]
-    },
-    {
-        'question': 'practise_operation_q8',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q9',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q10',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q11',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q12',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q13',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q14',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q15',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q16',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q17',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '8.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q18',
-        'options': [
-            {'value': '0.No Solution', 'label': 'No Solution'},
-            {'value': '3.Medium Solution', 'label': 'Medium Solution'},
-            {'value': '6.Optimal Solution', 'label': 'Optimal Solution'}]
-    },
-    {
-        'question': 'practise_operation_q19',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q20',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '7.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q21',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q22',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q23',
-        'options': [
-            {'value': '0.No', 'label': 'No Scripts'},
-            {'value': '2.Yes', 'label': 'Yes, some scripts'}]
-    },
-    {
-        'question': 'practise_operation_q24',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '6.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q25',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q26',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q27',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes (e.g. Telesec, Darwin, Patrol, Browser, Cron job script)'}]
-    },
-    {
-        'question': 'practise_operation_q28',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '5.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q29',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '1.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q30',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q31',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '2.Yes', 'label': 'Yes'}]
-    },
-    {
-        'question': 'practise_operation_q32',
-        'options': [
-            {'value': '0.No', 'label': 'No'},
-            {'value': '3.Yes', 'label': 'Yes'}]
-    },
-];
-
-
-export const practise_exploration_questions = [
-    {
-        'question': 'practise_exploration_q1',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): Ideas are vague or not defined.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Ideas are defined (example: as epics) but do not include hypothesis statements.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Some ideas are expressed as hypothesis statements with measurable outcomes.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Most ideas are expressed as hypothesis statements with measurable outcomes and include MVPs.'},
-            {'value': '12.Fly', 'label': 'Fly (9-10): All ideas are expressed as hypothesis statements with measurable outcomes and include MVPs.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q2',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): Architecture is monolithic and fragile; it is difficult to change and involves managing complex dependencies across many components and systems. '},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Architecture is predominantly monolithic but some applications and systems are loosely coupled.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Architectures is mostly decoupled but doesn\'t allow Release on Demand.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Architecture is aligned around value delivery and with few dependencies across components and systems. '},
-            {'value': '12.Fly', 'label': 'Fly (9-10): Architecture is built for Release on Demand and operability.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q3',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): Product Management roles and responsibilities are not defined or followed.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Product Management creates requirements in large batches with little customer or development collaboration.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Product Management collaborates with business-side or development-side experts, but not both, when defining requirements.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Product Management regularly collaborates with business-side, development-side, and operation-side experts but does not define MMFs.'},
-            {'value': '12.Fly', 'label': 'Fly (9-10): Product Management always collaborates with business-side, development-side, and operation-side experts and defines MMFs.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q4',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): The program backlog does not exist or is not shared. '},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): The program backlog exists but the Features are incomplete and prioritization is an afterthought. '},
-            {'value': '6.Walk', 'label': 'Walk (5-6): The program backlog contains fully defined features but are not prioritized using weighted shortest job first (WSJF).'},
-            {'value': '8.Run', 'label': 'Run (7-8): Features in the program backlog are complete, prioritized using WSJF and calibrated to the delivery capacity of the agile release train (ART).'},
-            {'value': '12.Fly', 'label': 'Fly (9-10): The program backlog is a collection of Minimum Marketable Features created using Behavior Driven Development (BDD) and prioritized using WSJF.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q5',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): Builds are run fewer than once per iteration and/or are completely manual.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Builds are run once per iteration and are partially automated. Dev branches are open for a month or more and builds break often.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Automated builds run once a day. Broken builds are corrected in 2-4 hours. Manual unit tests are run against each build. Dev branches are open for 2-4 weeks.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Builds run automatically upon code commit; broken builds are corrected within 1 hour; automated unit tests are run against each build; dev branches are merged to trunk every iteration. '},
-            {'value': '13.Fly', 'label': 'Fly (9-10): Builds run on every commit; builds include static code analysis and security testing; gated commits prevent defects from entering the version control; dev branches are merged to trunk on every commit."'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q6',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): The team backlog does not exist or is not used to manage daily work.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Stories are either incomplete or too verbose; unit tests are generally not written; peer reviews are not conducted.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Stories are complete; most changes have unit tests; peer reviews are usually conducted.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Code is checked in daily; unit test coverage is 80%+; peer reviews are always conducted.'},
-            {'value': '13.Fly', 'label': 'Fly (9-10): Code is checked in multiple times per day; tests are written before code (TDD); pair work and other Built-in quality practices are the norm.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q7',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): No staging environment exists or we use a test environment for staging.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Features are deployed manually to a staging environment once every PI.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Features are deployed to a staging environment once per month and demonstrated to Product Management.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Features and infrastructure are auto-deployed to a staging environment every iteration and accepted by Product Management.'},
-            {'value': '13.Fly', 'label': 'Fly (9-10): Stories, changes and infrastructure are auto-deployed to a staging environment, validated, and immediately proceed to deployment.'}
-        ]
-    },
-    {
-        'question': 'practise_exploration_q8',
-        'options': [
-            {'value': '2.Sit', 'label': 'Sit (1-2): No staging environment exists or we use a test environment for staging.'},
-            {'value': '4.Crawl', 'label': 'Crawl (3-4): Features are deployed manually to a staging environment once every PI.'},
-            {'value': '6.Walk', 'label': 'Walk (5-6): Features are deployed to a staging environment once per month and demonstrated to Product Management.'},
-            {'value': '8.Run', 'label': 'Run (7-8): Features and infrastructure are auto-deployed to a staging environment every iteration and accepted by Product Management.'},
-            {'value': '13.Fly', 'label': 'Fly (9-10): Stories, changes and infrastructure are auto-deployed to a staging environment, validated, and immediately proceed to deployment.'}
-        ]
-    },
-];
-
-export const practise_release_on_demand_questions = [
-    {
-        'question': 'practise_release_on_demand_q1',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Features are never evaluated post-release.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Features are sometimes evaluated using subjective information and/or unilateral opinions.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Hypotheses are evaluated using objective measures but actions are heavily influenced by corporate politics.'},
-            {'value': '15.Run', 'label': 'Run (15): Hypotheses are objectively evaluated; pivot-or-persevere decisions are made without mercy or guilt.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Continuous learning and experimentation are ingrained in the DNA of the organization.'}
-        ]
-    },
-    {
-        'question': 'practise_release_on_demand_q2',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): We don’t define or measure the value of Features.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): We’ve defined what "value" is but don’t know how to measure it.'},
-            {'value': '10.Walk', 'label': 'Walk (10): We capture qualitative feedback from the business about the value of our Features. '},
-            {'value': '15.Run', 'label': 'Run (15): We capture qualitative and quantitative feedback from the business and our monitoring systems about the value of our features.'},
-            {'value': '25.Fly', 'label': 'Fly (25): We aggregate the quantitative and qualitative feedback to objectively validate the original hypothesis and inform pivot-or-persevere decisions.'}
-        ]
-    },
-    {
-        'question': 'practise_release_on_demand_q3',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): Releases are tightly coupled to deployments and customers are extremely dissatisfied with the frequency of releases.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): Releases are tightly coupled to deployments but customers are somewhat dissatisfied with the frequency of releases.'},
-            {'value': '10.Walk', 'label': 'Walk (10): Release and deployment are coupled but both occur continuously or on demand.'},
-            {'value': '15.Run', 'label': 'Run (15): Release is decoupled from deployment; deployed features are released to the end user population based on business readiness.'},
-            {'value': '25.Fly', 'label': 'Fly (25): Deployed Features can be released to individual segments of the user population; feature toggles are refactored when no longer used.'}
-        ]
-    },
-    {
-        'question': 'practise_release_on_demand_q4',
-        'options': [
-            {'value': '0.Sit', 'label': 'Sit (0): We experience frequent unplanned outages and/or security breaches with long recovery times.'},
-            {'value': '5.Crawl', 'label': 'Crawl (5): We experience occasional unplanned outages but recover within our service level agreements.'},
-            {'value': '10.Walk', 'label': 'Walk (10): We have very few unplanned outages; availability, security, and disaster recovery measures are effective.'},
-            {'value': '15.Run', 'label': 'Run (15): We have no unplanned outages; We plan and rehearse failure and recovery.'},
-            {'value': '25.Fly', 'label': 'Fly (25): We maximize resiliency by deliberately injecting faults into our production environment and rehearsing recovery procedures.'}
-        ]
-    },
-];
 
 export const practises = [
     {num: '1', uid: 'practise_automation', image: practise_automation_image, questions: practise_automation_questions},
@@ -1318,9 +950,5 @@ export const practises = [
     {num: '11', uid: 'practise_requirements', image: practise_requirements_image, questions: practise_requirements_questions},
     {num: '12', uid: 'practise_docs_logs', image: practise_docs_logs_image, questions: practise_docs_logs_questions},
     {num: '13', uid: 'practise_non_functional', image: practise_nft_image, questions: practise_non_functional},
-    {num: '14', uid: 'practise_monitoring', image: monitoring_image, questions: practise_monitoring_questions},
-    {num: '15', uid: 'practise_operation', image: operation_image, questions: practise_operation_questions},
-    {num: '16', uid: 'practise_exploration', image: exploration_image, questions: practise_exploration_questions},
-    {num: '17', uid: 'practise_release_on_demand', image: release_on_demand_image, questions: practise_release_on_demand_questions},
 ];
 

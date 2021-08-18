@@ -1,4 +1,8 @@
-﻿.practise_selector_row {
+﻿.results_wrapper_line {
+    width: 100%;
+}
+
+.practise_selector_row {
     height: 55px;
     width: 100%;
     margin-top: 7px;

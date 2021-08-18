@@ -44,17 +44,9 @@ function PractiseLine(props) {
             }
 
         } else {
-            if (props.practise === 'practise_automation' ||
-                props.practise === 'practise_unit_test' ||
-                props.practise === 'practise_smoke_regression' ||
-                props.practise === 'practise_component_test') {
-                    setText('N/A, ' + props.title);
-                    setColor('#ffe6e6'); // red
-                    setPercent(0);
-
-            } else {
-                setPercent(-100);
-            }
+            setText('N/A, ' + props.title);
+            setColor('#ffe6e6'); // red
+            setPercent(0);
         }
 
     }, [ props.practise, props.title, props.number ]);
@@ -94,9 +86,11 @@ export default function Results(props) {
 
     return (
         <Dialog open={props.open} fullScreen={true} TransitionComponent={Transition} transitionDuration={900}>
-            <Title title={results[props.lang]['title']}
-                src={image} onClose={() => props.onUpdate('close')}/>
-            <ColorLine/>
+            <Title title={results[props.lang]['title']} src={image} onClose={() => props.onUpdate('close')}/>
+
+            <div className='results_wrapper_line'>
+                <ColorLine/>
+            </div>
 
             <div className={classes.chart}>
                 {props.level !== 'Undefined' &&
@@ -138,6 +132,10 @@ export default function Results(props) {
                         onUpdate={() => props.onUpdate('practise', practise.uid)}/>
                 )}
 
+            </div>
+
+            <div className='results_wrapper_line'>
+                <ColorLine margin='13px'/>
             </div>
 
             <div className='results_wrapper_btn'>
